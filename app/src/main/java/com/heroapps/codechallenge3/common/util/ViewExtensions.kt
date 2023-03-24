@@ -16,8 +16,7 @@ fun EditText.validateFullName(): Boolean {
 fun EditText.validateEmail(): Boolean {
 
     val emailText = text.toString()
-    val regex = Regex("^[a-zA-Z\\d.!#\$%&'*+/=?^_`{|}~-]+@[a-zA-Z\\d](?:[a-zA-Z\\d-]{0,61}[a-zA-Z\\d])?(?:\\.[a-zA-Z\\d](?:[a-zA-Z\\d-]{0,61}[a-zA-Z\\d])?)*\$")
-
+    val regex = Regex("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+")
     return regex.matches(emailText)
 }
 
